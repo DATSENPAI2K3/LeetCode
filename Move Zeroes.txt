@@ -1,0 +1,19 @@
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    let luu = 0;
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] == 0){
+            nums.splice(i,1);
+            i--;
+            luu++;
+        }
+    }
+    let x = nums.length;
+    for(let i = 0; i < luu; i++){
+        nums[x + i] = 0;
+    }
+    return nums;
+};
