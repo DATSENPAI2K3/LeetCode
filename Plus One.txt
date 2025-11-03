@@ -1,0 +1,16 @@
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+var plusOne = function(digits) {
+    let x = "";
+    for(let i = 0; i < digits.length; i++){
+        x += String(digits[i]);
+    }
+    x = BigInt(x) + 1n;
+    x = String(x);
+    for(let i = 0; i < x.length; i++){
+        digits[i] = Number(x[i]);
+    }
+    return digits;
+};
