@@ -1,0 +1,11 @@
+var canMakeArithmeticProgression = function(arr) {
+    arr.sort((a,b) => a - b);
+    let x = arr[0] - arr[1];
+    let y;
+    for(let i = 1; i < arr.length - 1; i++){
+        y = arr[i] - arr[i + 1];
+        if(y !== x) return false;
+    }
+    
+    return true;
+};
